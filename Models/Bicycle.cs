@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Final_Project_BikeGuard.Models;
+﻿namespace Final_Project_BikeGuard.Models;
 
 public class Bicycle
 {

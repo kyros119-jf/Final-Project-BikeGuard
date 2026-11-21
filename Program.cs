@@ -1,11 +1,29 @@
 ﻿using Final_Project_BikeGuard.Models;
+using Final_Project_BikeGuard.Models.Services;
 
-Bicycle myBike = new Bicycle("GT", "Aggressor Pro", 2018);
-Console.WriteLine($"Bicycle ID: {myBike.Id}");
-Console.WriteLine($"Brand: {myBike.Brand}");
-Console.WriteLine($"Model: {myBike.Model}");
-Console.WriteLine($"Year: {myBike.Year}");
-Console.WriteLine($"Armed: {myBike.IsArmed}");
+Bicycle gt = new Bicycle("GT", "Aggressor Pro", 2018);
+Bicycle trek = new Bicycle("Trek", "Marlin 7", 2020);
 
-myBike.Arm();
-myBike.Disarm();    
+BicycleManager manager = new BicycleManager();
+
+manager.AddBicycle(gt);
+
+Console.WriteLine();
+
+manager.AddBicycle(trek);
+
+Console.WriteLine();
+
+manager.ListBicycles();
+
+Console.WriteLine();
+
+manager.RemoveBicycle(gt.Id);
+
+Console.WriteLine();
+
+manager.ListBicycles();
+
+Console.WriteLine();
+
+manager.RemoveBicycle(gt.Id);
